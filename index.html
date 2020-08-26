@@ -25,17 +25,20 @@
         name: 'Ryu',
         age: 21,
       }
-      handleClick(e) { // definiálunk egy fg-t, egy event objectet kap "e". 
+      handleClick = (e) => { // definiálunk egy fg-t, egy event objectet kap "e". 
         console.log(e.target ) //egy tulajdonsága van az event-nek amit target-nek nevezünk.
         //A 37-es sorban nem rakjuk ki a zárójeleket,mert a függvényt azonnal megfogja hívni amikor betöltődik az oldal,
         // azt akarjuk, hogy akkor működjön amikor a felhasználó rákattint 
         // kattintáskor a targetet fogja ki loggolni. vagyis a <button>Click me</button>
-        console.log(this.state)
+        this.setState({ //a setSate-el tudunk statet változtatni.
+          name: 'Yoshi',
+          age: 22
+        })
       }
-      handleMouseOver(e) {
+      handleMouseOver = (e) => {
         console.log(e.target, e.pageX)
       }
-      handleCopy(e) {
+      handleCopy = (e) => {
         console.log('Try being original for once!')
       }
       render() {
