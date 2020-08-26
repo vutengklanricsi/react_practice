@@ -15,11 +15,17 @@
     
   <script type="text/babel"> // ki kell rakni ezt, hogy kirendelődjönnek a dolgok type="text/babel"
     class App extends React.Component {
+      state = {
+        name: 'Ryu',
+        age: 21,
+
+      }
       render() {
         return (
           <div className="app-content">
             <h1>Hey, Ninjas</h1>
             <p>{ Math.random() * 10 }</p>
+            <h2>My name is { this.state.name } and i am { this.state.age } years old</h2>
           </div>
         )
       }
