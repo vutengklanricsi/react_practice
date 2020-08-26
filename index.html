@@ -2,6 +2,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script> <!-- babel transzpilálja a kódot, hogy a böngésző értse a kódot -->
   <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> <!-- core react library -->
   <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>  <!-- glue layer a 
     dom és a react között, injektálja a kompononseket és kirendereli a dom-ban -->
@@ -12,12 +13,13 @@
 
   </div>
     
-  <script>
+  <script type="text/babel"> // ki kell rakni ezt, hogy kirendelődjönnek a dolgok type="text/babel"
     class App extends React.Component {
       render() {
         return (
           <div className="app-content">
             <h1>Hey, Ninjas</h1>
+            <p>{ Math.random() * 10 }</p>
           </div>
         )
       }
