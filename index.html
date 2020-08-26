@@ -41,20 +41,42 @@
       handleCopy = (e) => {
         console.log('Try being original for once!')
       }
+      handleChange = (e) => {
+        this.setState({
+          name: e.target.value
+        });
+      }
+      handleSubmit = (e) => {
+        e.preventDefault();
+        console.log('form submitted', this.state.name);
+      }
       render() {
         return (
           <div className="app-content">
             <h1>Hey, Ninjas</h1>
+          
             <p>{ Math.random() * 10 }</p>
+          
             <h2>My name is { this.state.name } and i am { this.state.age } years old</h2>
+          
             <button onClick={ this.handleClick }>Click me</button>
             <button onMouseOver={ this.handleMouseOver}>Hover me</button>
+          
             <p onCopy={this.handleCopy}>What we think, we become</p>
-          </div>
+
+            <form onSubmit={ this.handleSubmit }>
+              <input type="text" onChange={ this.handleChange }/> 
+              <button>Submit</button>
+            </form>
+          
+            </div>
         )
       }
     }
 
+    // eventet használunk az 54-es sorban onChange
+    // 44-es sorban létrehozzuk a fg-t. e.target.value itt az kerül be amit a felhasználó az input mezőbe beírt
+    // Az 58-as sorban hozzáadjuk az onSubmit eventet aminek a hatására az enter illetve a ráklikkelve elküdjük az adatot.
   ReactDOM.render(<App />, document.getElementById('app')) // itt lehet renderelni a kompononseket a DOMba. Az első paraméter a komponens neve.A második paraméter, hogy hova szeretnénk kirenderelni a domban 
   </script>
 
