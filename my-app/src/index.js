@@ -15,3 +15,5 @@ ReactDOM.render(
 // unregister() to register() below. Note this comes with some pitfalls.
 // Learn more about service workers: https://bit.ly/CRA-PWA
 serviceWorker.unregister();
+
+// A komponenseket ebben az index fájlban jelenítjűk meg a DOM-ban
