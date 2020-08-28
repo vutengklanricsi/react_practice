@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React from 'react';
 
 // 10-ik sorban adni kell neki egy key-t
 const Ninjas = ({ ninjas }) => {
