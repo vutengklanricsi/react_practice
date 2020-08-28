@@ -13,7 +13,8 @@ class AddNinja extends Component {
   }
   handleSubmit = (e) => {
     e.preventDefault()
-    console.log(this.state)
+    this.props.addNinja(this.state) // itt azért this.props mert classoknál így 
+    // referálunk a propsokra, függvényeknék vagyis amikor propsot adunk át container componensekbe akkor paraméterként adjuk át őket
   }
   render() {
     return (
