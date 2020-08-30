@@ -17,16 +17,21 @@ class App extends Component {
       this.setState({
         ninjas: ninjas
       })
-      console.log(ninja)
     }
     deleteNinja = (id) => {
-      console.log(id)
       let ninjas = this.state.ninjas.filter(ninja => {
         return ninja.id !== id
       })
       this.setState({
         ninjas: ninjas
       })
+    }
+    componentDidMount() {
+      console.log('Component mounted');
+    }
+    componentDidUpdate(prevProps, prevState) {
+      console.log('Component updated');
+      console.log(prevProps, prevState);
     }
     render() {
       return (
