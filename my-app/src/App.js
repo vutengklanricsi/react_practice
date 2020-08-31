@@ -26,10 +26,10 @@ class App extends Component {
         ninjas: ninjas
       })
     }
-    componentDidMount() {
+    componentDidMount() { // a komponens először mountolja a DOM-ot
       console.log('Component mounted');
     }
-    componentDidUpdate(prevProps, prevState) {
+    componentDidUpdate(prevProps, prevState) { // Ez akkor aktiválódik amikor frissül az state, vagy a props
       console.log('Component updated');
       console.log(prevProps, prevState);
     }
