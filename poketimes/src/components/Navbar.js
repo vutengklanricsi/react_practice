@@ -1,7 +1,11 @@
 import React from 'react';
-import {Link, NavLink} from 'react-router-dom'
+import {Link, NavLink, withRouter} from 'react-router-dom'
 
-const Navbar = () =>  {
+const Navbar = (props) =>  {
+  console.log(props)
+  setTimeout(() => {
+    props.history.push('/about')
+  }, 2000)
   return (
     <nav className="nav-wrapper red darken-3">
       <div className="container">
@@ -16,7 +20,8 @@ const Navbar = () =>  {
   )
 }
 
-export default Navbar;
+export default withRouter(Navbar); // kibontja a komponenst ez a függvény magasabb rendű komponens alkalmazza ezeket a tulajdonságokat a propsokba, hogy 
+//megtegye a router-be és visszaadja a komponens-be  supercharge
 // Link to - megakadályozza, hogy egy requestet küldjön a szerverbe
 // Navlink -el rárak egy active class-t az anchor tagre. A link taggel nem kapjuk meg ezt az active class-t
 // Navlink az akkor aktiválódik amikor rákattintunk a gombra ami átírányit a URL-be
