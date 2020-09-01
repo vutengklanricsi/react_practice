@@ -1,4 +1,6 @@
 import React from 'react';
+import Practice from './hoc/Practice'
+
 
 const Contact = (props) => {
   // console.log(props)
@@ -13,6 +15,6 @@ const Contact = (props) => {
   )
 }
 
-export default Contact;
+export default Practice(Contact);
 // Ha a függvénynek adunk egy Props paramétert akkor automatikusan hozzáadja props router információkat
 // ez azért van, mert ez az egyik komponens router betölt. Eddig 
