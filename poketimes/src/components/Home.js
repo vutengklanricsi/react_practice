@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import ColorPractice from './hoc/ColorPractice'
 
 class Home extends Component {
   state = {
     posts: [],
   }
-  componentDidMount() {
+  componentDidMount() { // componentDidMount 
     axios.get('https://jsonplaceholder.typicode.com/posts') // adatot szedd ki az url-ből és egy asynchronus művelet.
     //Ami azt Jelenti, hogy időbe telik neki míg visszatér egy válasszal
     // egy promise-al fog visszatérni - ez azt jelenti, hogy valamikor a jövőben be fog teljesülni.
@@ -47,4 +48,4 @@ class Home extends Component {
   }
 }
 
-export default Home;
+export default ColorPractice(Home);

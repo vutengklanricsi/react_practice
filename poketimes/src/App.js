@@ -4,6 +4,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Home from './components/Home';
 import Contact from './components/Contact';
 import About from './components/About';
+import Post from './components/Post';
 
 class App extends Component {
   render() {
@@ -14,6 +15,7 @@ class App extends Component {
           <Route exact path="/" component={Home} />
           <Route path="/about" component={About} />
           <Route path="/contact" component={Contact} />
+          <Route path="/:post_id" component={Post} /> 
         </div>
       </BrowserRouter>
     );
@@ -21,6 +23,8 @@ class App extends Component {
 }
 
 export default App;
+
+// Route parameter - 17-es sorban /:post_id csinálunk egy  változót
 
 //npm installreact-router-dom - ezzel tudjuk a a komponenseket összekötni a Domban 
 //14-es sorban a az exact szóval tudjuk azt megcsinálni, hogy  a többi komponensek ne töltsenek be a homera
